@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-option{
+    @apply py-1 text-xl hover:border-b-2 hover:border-gray-700 cursor-pointer;
+}
+
+.title-lg{
+    width:715px;
+}
