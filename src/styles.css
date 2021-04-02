@@ -6,6 +6,31 @@
     @apply py-1 text-xl hover:border-b-2 hover:border-gray-700 cursor-pointer;
 }
 
+.button{
+    @apply py-1 px-3 rounded-md bg-blue-500 text-gray-100  hover:bg-blue-700 focus:outline-none;
+}
+
+.width-lg{
+    width:815px;
+}
+
+.card{
+    @apply w-1/3 p-6 mx-2 my-2 hover:shadow-2xl rounded-xl px-2;
+}
+
+.card-image{
+   @apply rounded-2xl my-4 hover:transition-transform hover:transform hover:scale-105;
+}
+
+/* Typography */
 .title-lg{
-    width:715px;
+    @apply font-semibold text-4xl mx-auto mt-8;
+}
+
+.title-md{
+    @apply font-semibold text-3xl mx-auto mt-8;
+}
+
+.title-md-bold{
+    @apply font-bold text-3xl mx-auto mt-8;
 }
