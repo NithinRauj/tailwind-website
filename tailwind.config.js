@@ -5,6 +5,10 @@ module.exports = {
     extend: {
       colors: {
         primary: '#100E1D',
+      },
+      screens: {
+        medium: { 'max': '865px' },
+        mobile: { 'max': '375px' }
       }
     },
   },

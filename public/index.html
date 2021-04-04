@@ -10,35 +10,47 @@
 </head>
 
 <body>
-    <div class='font-mono'>
-        <nav class='flex flex-row flex-start justify-around text-gray-800 py-6'>
-            <span class='text-4xl font-bold mr-96'>Edie</span>
-            <span class='nav-option'>Home</span>
-            <span class='nav-option'>Services</span>
-            <span class='nav-option'>Our Works</span>
-            <span class='nav-option'>Clients</span>
-            <span class='nav-option'>Contact Us</span>
+    <div class='font-mono mobile:overflow-hidden'>
+        <nav class='flex flex-row flex-start justify-end text-gray-800 py-6 mobile:px-4 mobile:justify-between'>
+            <span class='text-4xl font-bold mr-auto pl-6 self-start'>Edie</span>
+            <div class='flex justify-around medium:hidden mobile:hidden'>
+                <span class='nav-option'>Home</span>
+                <span class='nav-option'>Services</span>
+                <span class='nav-option'>Our Works</span>
+                <span class='nav-option'>Clients</span>
+                <span class='nav-option'>Contact Us</span>
+            </div>
+            <div class='hidden medium:block mobile:block relative'>
+                <ion-icon name="menu-outline" size='large' id='menu-icon'></ion-icon>
+                <div class='bg-white w-32 absolute right-1 z-10 shadow-2xl hide' id='menu'>
+                    <div class='px-2 py-2 hover:bg-gray-200'>Home</div>
+                    <div class='px-2 py-2 hover:bg-gray-200'>Services</div>
+                    <div class='px-2 py-2 hover:bg-gray-200'>Our Works</div>
+                    <div class='px-2 py-2 hover:bg-gray-200'>Clients</div>
+                    <div class='px-2 py-2 hover:bg-gray-200'>Contact Us</div>
+                </div>
+            </div>
         </nav>
-        <div class='w-4/5 m-auto'>
-            <div class='text-2xl text-blue-500 font-semibold mx-auto mt-8 w-96'>
+        <div class='w-4/5 m-auto mobile:w-11/12'>
+            <div class='text-2xl text-blue-500 font-semibold mx-auto w-96 mobile:w-80 mobile:text-sm'>
                 <span>Unhappy with your website?</span>
             </div>
-            <div class='title-lg width-lg'>
+            <div class='title-lg width-lg mobile:w-72 mobile:text-2xl'>
                 <span>We create beautiful and fast web services</span>
             </div>
-            <div class='mx-auto w-11/12 py-6'>
-                <img class='rounded-xl' src="./img/hero.jpg" alt="hero-image">
+            <div class='mx-auto w-11/12 py-6 mobile:mx-0 mobile:w-80 mobile:h-36'>
+                <img class='rounded-xl mobile:w-80 mobile:h-28' src="./img/hero.jpg" alt="hero-image">
             </div>
-            <section class='w-1/3 mx-auto py-10'>
+            <section class='w-1/3 mx-auto py-10 mobile:w-full mobile:py-5'>
                 <div class='title-lg py-6'>Story,emotion and purpose</div>
-                <p class='w-11/12 text-lg text-justify'>
+                <p class='w-11/12 text-lg text-justify mobile:text-base'>
                     We help transform your ideas into real world applications that will
                     outperform your toughest competition and help you achieve your strategic
                     goals in short period of time.
                 </p>
             </section>
-            <div class='w-1/3 mx-auto py-6 relative'>
-                <div class='w-80 h-11 bg-gray-200 rounded-md'>
+            <div class='w-1/3 mx-auto py-6 relative mobile:mx-0'>
+                <div class='w-72 h-11 bg-gray-200 rounded-md'>
                     <input type='text' placeholder='Email' class='w-3/4 bg-gray-200 rounded-md outline-none py-2 px-2'>
                     <button class='button'>Join</button>
                 </div>
@@ -86,23 +98,23 @@
             </section>
             <section class="py-6">
                 <span class="title-md">Good design means good business</span>
-                <div class="grid grid-cols-2 grid-rows-2">
-                    <div>
+                <div class="grid grid-cols-2 grid-rows-2 mobile:flex mobile:flex-col">
+                    <div class='mobile:py-5'>
                         <img class='card-image' src="./img/smarthome.jpg" alt="smart-home">
                         <span class='text-gray-500 py-2'>Full stack application</span><br>
                         <span class='font-bold text-xl mx-auto mt-8'>Smart home dashboard</span>
                     </div>
-                    <div>
+                    <div class='mobile:py-5'>
                         <img class='card-image' src="./img/onboard.png" alt="smart-home">
                         <span class='text-gray-500 py-2'>UI/UX Design</span><br>
                         <span class='font-bold text-xl mx-auto mt-8'>Onboard application</span>
                     </div>
-                    <div>
+                    <div class='mobile:py-5'>
                         <img class='card-image' src="./img/booking.png" alt="smart-home">
                         <span class='text-gray-500 py-2'>Mobile application</span><br>
                         <span class='font-bold text-xl mx-auto mt-8'>Booking system</span>
                     </div>
-                    <div>
+                    <div class='mobile:py-5'>
                         <img class='card-image' src="./img/juice-product.png" alt="smart-home">
                         <span class='text-gray-500 py-2'>Front end application</span><br>
                         <span class='font-bold text-xl mx-auto mt-8'>Juice product homepage</span>
@@ -117,23 +129,26 @@
                 </ion-icon>
             </section>
             <section class='py-6'>
-                <div class="flex justify-between">
-                    <div class='w-2/5'>
+                <div class="flex justify-between mobile:flex-col">
+                    <div class='w-2/5 mobile:w-4/5'>
                         <div class='text-lg text-red-600 pb-4'>Meet the team</div>
                         <div class='text-4xl pb-4'>We are chilled and a laidback team</div>
                         <div class='text-lg font-extralight'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </div>
                     </div>
-                    <div class="flex justify-evenly w-3/5">
-                        <img class='rounded-3xl w-64 h-60 object-none self-center' src="./img/girl.png" alt="girl">
+                    <div class="flex justify-evenly w-3/5 mobile:w-full">
+                        <img class='rounded-3xl w-64 h-60 mobile:w-36 mobile:h-32 object-none self-center'
+                            src="./img/girl.png" alt="girl">
                         <div class='flex flex-col items-stretch'>
-                            <img class='rounded-3xl w-52 h-48 object-cover mb-6' src="./img/boy1.png" alt="boy1">
-                            <img class='rounded-3xl w-64 h-64  object-cover' src="./img/boy2.png" alt="boy2">
+                            <img class='rounded-3xl w-52 h-48 mobile:w-36 mobile:h-36 object-cover mb-6'
+                                src="./img/boy1.png" alt="boy1">
+                            <img class='rounded-3xl w-64 h-64 mobile:w-40 mobile:h-40  object-cover'
+                                src="./img/boy2.png" alt="boy2">
                         </div>
                     </div>
                 </div>
             </section>
-            <section class='py-8 w-1/2'>
+            <section class='py-8 w-1/2 mobile:w-full mobile:py-10'>
                 <div class='text-3xl pb-8'>
                     “Fast and outstanding resutls. Edie understands their customer’s needs.
                     They have a young and talented team.”
@@ -149,7 +164,7 @@
             </section>
         </div>
         <footer class='bg-primary w-full'>
-            <div class='flex justify-evenly'>
+            <div class='flex justify-evenly mobile:flex-col mobile:items-center'>
                 <div class='flex flex-col py-8'>
                     <span class='text-white text-xl py-1 cursor-pointer'>Home</span>
                     <span class='text-white text-xl py-1 cursor-pointer'>Services</span>
@@ -174,10 +189,26 @@
                     </div>
                 </div>
             </div>
-            <div class='text-lg text-white w-1/3 m-auto py-8'>Created by Nithin Rauj - devChallenges.io</div>
+            <div class='text-lg text-white w-1/3 m-auto py-8 mobile:text-base mobile:w-full mobile:ml-1'>Created by
+                Nithin Rauj -
+                devChallenges.io
+            </div>
         </footer>
     </div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const menu = document.getElementById('menu');
+        menuIcon.addEventListener('click', () => {
+            if (menu.classList.contains('show')) {
+                menu.classList.remove('show');
+                menu.classList.add('hide');
+            } else {
+                menu.classList.remove('hide');
+                menu.classList.add('show');
+            }
+        });
+    </script>
 </body>
 
 </html>
